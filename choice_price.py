@@ -6,17 +6,13 @@ from tinyman.v1.client import TinymanClient
 import discord
 from discord.ext import commands
 
-# Get bot tokens
-f = open('./keys.json',)
-keys = json.load(f)
-f.close()
 
 # Create a discord client
 dicord_client = discord.Client()
 
 # Get Algo Client / Using purestake; supplement your own API key for the algod_token
 algod_address = 'https://mainnet-algorand.api.purestake.io/ps2'
-algod_token = keys['algod_token']
+algod_token = "TvmC8LFzjh2jmMCPZMG9i6lv720pm0Tt5EwoPULC"
 headers = {'X-API-Key': algod_token}
 algod_client = algod.AlgodClient(algod_token, algod_address, headers)
 
@@ -75,4 +71,4 @@ async def on_ready():
         time.sleep(10)
 
 # Run the client and commander
-dicord_client.run(keys['bot_token'])
+dicord_client.run("OTAxMDcwNzkwMjgyMzE3ODI0.YXKhkQ.uhoP3LEQXNis9g8xBq6fxk4RksQ")
