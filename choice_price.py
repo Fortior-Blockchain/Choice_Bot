@@ -18,7 +18,7 @@ algod_client = algod.AlgodClient(algod_token, algod_address, headers)
 
 # Get TMan Client / 350338509 is the app ID for all TinymanClient implementations
 # Get Assets and Pools - ALGO, CHOICE, USDC
-tinyman = TinymanClient(algod_client, 350338509)
+tinyman = TinymanClient(algod_client, 552635992)
 ALGO = tinyman.fetch_asset(0)
 CHOICE = tinyman.fetch_asset(297995609)
 USDC = tinyman.fetch_asset(31566704)
