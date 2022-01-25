@@ -27,7 +27,7 @@ CHOICE_ALGO = tinyman.fetch_pool(CHOICE, ALGO)
 
 # Retrieve price of choice
 def get_prices():
-    quote_ALGO_USDC = ALGO_USDC.fetch_fixed_input_swap_quote(ALGO(1_000_000), slippage=0)
+    quote_ALGO_USDC = ALGO_USDC.fetch_fixed_input_swap_quote(ALGO(1000000), slippage=0)
     algo_price = float(quote_ALGO_USDC.amount_out_with_slippage.amount) / float(10**quote_ALGO_USDC.amount_out_with_slippage.asset.decimals)
     quote_CHOICE_ALGO = CHOICE_ALGO.fetch_fixed_input_swap_quote(CHOICE(100), slippage=0)
     choice_out = float(quote_CHOICE_ALGO.amount_out_with_slippage.amount) / float(10**quote_CHOICE_ALGO.amount_out_with_slippage.asset.decimals)
